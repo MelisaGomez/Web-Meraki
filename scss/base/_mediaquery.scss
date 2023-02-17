@@ -1,8 +1,6 @@
 /*--- MEDIA QUERY---*/
 
 @media screen and (max-width:1300px){
-/*Index*/
-
 
 /*Nosotros*/
 
@@ -66,7 +64,21 @@
 
 }
 
+@media screen and (max-width:1032px){
+
+    /*Index*/
+    .video-index{
+        iframe{
+            padding-bottom: 30px;;
+        }
+    }
+    
+    }
+
+
+
 @media screen and (max-width:1000px){
+
 
 /*Servicios*/
 .servicios{
@@ -75,6 +87,66 @@
 }
 
 }
+
+@media screen and (max-width:900px){
+
+/*Index*/
+    
+.grid-main{
+    .destacado{
+        .foto-destacada{
+            img{
+                width: 300px;
+                height: 235px;
+            }
+        }
+    }
+    .texto-destacado{
+        width: 70%;
+    }
+}
+
+}
+
+@media screen and (max-width:800px){
+
+/*Index*/
+        
+.grid-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "logo"
+    "destacado"
+    "video"
+    ;
+    .logo-meraki{
+        grid-area: logo;
+    }
+    .destacado{
+        grid-area: destacado;
+    }
+    .video-index{
+        grid-area: video;
+    }
+}
+
+}
+
+@media screen and (max-width:680px){
+
+/*Index*/
+.video-index{
+    iframe{
+        padding-bottom: 30px;;
+    }
+}
+
+}
+
+
+
 
 
 @media screen and (max-width:650px){
@@ -171,6 +243,16 @@ header{
     padding-top: 0;
 }
 
+/*Index*/
+
+.destacado{
+    width: 100%;
+    p{
+        justify-content: stretch;
+        width: 50%;
+    }
+}
+
 
 /*Nosotros*/    
 .nosotros-img{
@@ -186,16 +268,17 @@ header{
 
 /*Servicios*/
 .container-servicios{
+    height: 500%;
     .servicios{
         display: flex;
         flex-direction: column;
         margin-left: 20%;
-        border: solid 4px red;
         .area-servicios1{
             display: flex;
             flex-direction: column;
             div{
                 width: 100%;
+                margin-top: 10px;
             }
         }
         .area-servicios2{
@@ -203,7 +286,11 @@ header{
             flex-direction: column;
             div{
                 width: 100%;
+                margin-top: 10px;
             }
+        }
+        .video-serv{
+            margin-left: 10%;
         }
     }
 }
@@ -219,12 +306,12 @@ header{
         display: flex;
         flex-direction: column;
         margin-left: 20%;
-        border: solid 4px red;
         .area-servicios1{
             display: flex;
             flex-direction: column;
             div{
                 width: 100%;
+                margin-top: 10px;
             }
         }
         .area-servicios2{
@@ -232,19 +319,16 @@ header{
             flex-direction: column;
             div{
                 width: 100%;
+                margin-top: 10px;
             }
         }
     }
     .video-serv{
         display: flex;
         flex-direction: column;
-        
+        margin-left: 23%;
     }
 }
-
-
-
-
 
 }
 
@@ -278,26 +362,49 @@ header{
     }
 }
 
-
-
-
+/*Servicios*/
+.servicios{
+    margin-left: 15%;
 
 }
 
+}
 
+@media screen and (max-width:390px){
 
+/*Galería*/
+.container-servicios{
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        .area-servicios1{
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            div{
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+        .area-servicios2{
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            div{
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+    .video-serv{
+        display: flex;
+        flex-direction: column;
+        margin-left: 13%;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

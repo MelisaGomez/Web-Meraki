@@ -50,6 +50,55 @@ header {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover; }
+  .grid-container .grid-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo logo logo" "destacado destacado destacado" "video video video"; }
+    .grid-container .grid-main .logo-meraki {
+      grid-area: logo; }
+      .grid-container .grid-main .logo-meraki img {
+        width: 100%; }
+    .grid-container .grid-main .destacado {
+      grid-area: destacado;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      margin-bottom: 5%; }
+      .grid-container .grid-main .destacado .foto-destacada {
+        padding-top: 50px;
+        padding-bottom: 50px; }
+        .grid-container .grid-main .destacado .foto-destacada img {
+          border-radius: 20px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px; }
+      .grid-container .grid-main .destacado .texto-destacado {
+        align-items: center;
+        padding: 20px;
+        background-color: #ffffff;
+        opacity: 0.8; }
+        .grid-container .grid-main .destacado .texto-destacado h2 {
+          text-align: center;
+          padding-top: 10px;
+          color: #14ab88; }
+        .grid-container .grid-main .destacado .texto-destacado p {
+          width: 50%;
+          text-align: center;
+          padding-top: 10px;
+          margin-left: 24%; }
+        .grid-container .grid-main .destacado .texto-destacado h4 {
+          text-align: center;
+          padding-top: 20px;
+          color: #f76331; }
+    .grid-container .grid-main .video-index {
+      grid-area: video;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; }
 
 /*NOSOTROS*/
 .container-nosotros {
@@ -392,7 +441,6 @@ footer {
 
 /*--- MEDIA QUERY---*/
 @media screen and (max-width: 1300px) {
-  /*Index*/
   /*Nosotros*/
   .nosotros-img .nosotros-img1 {
     width: 80%;
@@ -441,11 +489,43 @@ footer {
       padding-right: 30px;
       align-items: center; } }
 
+@media screen and (max-width: 1032px) {
+  /*Index*/
+  .video-index iframe {
+    padding-bottom: 30px; } }
+
 @media screen and (max-width: 1000px) {
   /*Servicios*/
   .servicios {
     display: flex;
     flex-wrap: wrap; } }
+
+@media screen and (max-width: 900px) {
+  /*Index*/
+  .grid-main .destacado .foto-destacada img {
+    width: 300px;
+    height: 235px; }
+  .grid-main .texto-destacado {
+    width: 70%; } }
+
+@media screen and (max-width: 800px) {
+  /*Index*/
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo" "destacado" "video"; }
+    .grid-main .logo-meraki {
+      grid-area: logo; }
+    .grid-main .destacado {
+      grid-area: destacado; }
+    .grid-main .video-index {
+      grid-area: video; } }
+
+@media screen and (max-width: 680px) {
+  /*Index*/
+  .video-index iframe {
+    padding-bottom: 30px; } }
 
 @media screen and (max-width: 650px) {
   /*Nosotros*/
@@ -510,6 +590,12 @@ footer {
     display: flex;
     flex-direction: column;
     padding-top: 0; }
+  /*Index*/
+  .destacado {
+    width: 100%; }
+    .destacado p {
+      justify-content: stretch;
+      width: 50%; }
   /*Nosotros*/
   .nosotros-img .nosotros-img1 {
     flex-direction: column;
@@ -518,42 +604,49 @@ footer {
     flex-direction: column;
     align-items: center; }
   /*Servicios*/
-  .container-servicios .servicios {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20%;
-    border: solid 4px red; }
-    .container-servicios .servicios .area-servicios1 {
+  .container-servicios {
+    height: 500%; }
+    .container-servicios .servicios {
       display: flex;
-      flex-direction: column; }
-      .container-servicios .servicios .area-servicios1 div {
-        width: 100%; }
-    .container-servicios .servicios .area-servicios2 {
-      display: flex;
-      flex-direction: column; }
-      .container-servicios .servicios .area-servicios2 div {
-        width: 100%; } }
+      flex-direction: column;
+      margin-left: 20%; }
+      .container-servicios .servicios .area-servicios1 {
+        display: flex;
+        flex-direction: column; }
+        .container-servicios .servicios .area-servicios1 div {
+          width: 100%;
+          margin-top: 10px; }
+      .container-servicios .servicios .area-servicios2 {
+        display: flex;
+        flex-direction: column; }
+        .container-servicios .servicios .area-servicios2 div {
+          width: 100%;
+          margin-top: 10px; }
+      .container-servicios .servicios .video-serv {
+        margin-left: 10%; } }
 
 @media screen and (max-width: 480px) {
   /*Servicios*/
   .container-servicios .servicios {
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
-    border: solid 4px red; }
+    margin-left: 20%; }
     .container-servicios .servicios .area-servicios1 {
       display: flex;
       flex-direction: column; }
       .container-servicios .servicios .area-servicios1 div {
-        width: 100%; }
+        width: 100%;
+        margin-top: 10px; }
     .container-servicios .servicios .area-servicios2 {
       display: flex;
       flex-direction: column; }
       .container-servicios .servicios .area-servicios2 div {
-        width: 100%; }
+        width: 100%;
+        margin-top: 10px; }
   .container-servicios .video-serv {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    margin-left: 23%; } }
 
 @media screen and (max-width: 390px) {
   header {
@@ -567,4 +660,32 @@ footer {
     .nosotros-img .nosotros-img1 p {
       margin-right: 0; }
   .nosotros-img .nosotros-img2 {
-    align-content: center; } }
+    align-content: center; }
+  /*Servicios*/
+  .servicios {
+    margin-left: 15%; } }
+
+@media screen and (max-width: 390px) {
+  /*Galería*/
+  .container-servicios .servicios {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%; }
+    .container-servicios .servicios .area-servicios1 {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column; }
+      .container-servicios .servicios .area-servicios1 div {
+        width: 100%;
+        margin-top: 10px; }
+    .container-servicios .servicios .area-servicios2 {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column; }
+      .container-servicios .servicios .area-servicios2 div {
+        width: 100%;
+        margin-top: 10px; }
+  .container-servicios .video-serv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13%; } }

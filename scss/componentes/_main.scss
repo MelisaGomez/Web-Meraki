@@ -1,17 +1,74 @@
 
 /*INDEX*/
+
 .grid-container{
     background-image: url(../img/Body/fondo-index.jpg);
     @include background (center,no-repeat,scroll,cover);
+    .grid-main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "logo logo logo"
+        "destacado destacado destacado"
+        "video video video"
+        ;
+        .logo-meraki{
+            grid-area: logo;
+            img{
+                width: 100%;
+            }
+        }
+        .destacado{
+            grid-area: destacado;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .foto-destacada{
+                padding-top: 50px;
+                padding-bottom: 50px;
+                img{
+                    border-radius: 20px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+                }
+            }
+            .texto-destacado{
+                align-items: center;
+                padding: 20px;
+                background-color: #ffffff;
+                opacity: 0.8;
+                h2{
+                    text-align: center;
+                    padding-top: 10px;
+                    color: #14ab88;
+                }
+                p{
+                    width: 50%;
+                    text-align: center;
+                    padding-top: 10px;
+                    margin-left: 24%;
+                }
+                h4{
+                    text-align: center;
+                    padding-top: 20px;
+                    color: #f76331;
+                }
+            }
+        }
+        .video-index{
+            grid-area: video;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
 }
-
-
-
-
-
-
-
-
 
 
 
