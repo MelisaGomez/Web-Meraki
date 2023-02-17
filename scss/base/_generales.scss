@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GRID INDEX*/
+
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 60px auto 80px;
+    grid-template-areas: 
+    "navBar navBar"
+    "main main" 
+    "footer footer"
+    ;
+    .grid-navBar{
+        grid-area: navBar;
+    }
+    .grid-main{
+        grid-area: main;
+    }
+    .grid-footer{
+        grid-area: footer;
+    }
+}
+
+.grid-navBar{
+    nav{
+        ul{
+            li{
+                padding: 10px 10px;
+                a{
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

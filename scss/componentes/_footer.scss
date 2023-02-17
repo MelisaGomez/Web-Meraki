@@ -1,0 +1,20 @@
+/*----- Footer -----*/
+footer{
+    background-color: #efd61a;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    div{
+        h4{
+            margin-left: 5px;
+        }
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+
+

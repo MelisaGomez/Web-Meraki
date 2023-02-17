@@ -1,0 +1,26 @@
+
+//*Lista
+$Colores:
+#14ab88, /*navbar*/
+#efd61a, /*footer*/
+#ffffff, /*opacity*/
+#3d1320, /*título nosotros*/
+#8f1d17, /*título galería*/
+#147566, /*texto servicios*/
+#722039; /*título contacto*/
+
+
+//*Extends (%placeholder)
+
+
+
+
+
+//*Mixin
+@mixin background ($center,$no-repeat,$scroll,$cover){
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
