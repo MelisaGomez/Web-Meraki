@@ -47,15 +47,6 @@ header nav ul li a {
   text-decoration: none;
   color: white; }
 
-nav .menu-btn i {
-  color: white;
-  font-size: 22px;
-  margin-right: 30px;
-  display: none; }
-
-#click {
-  display: none; }
-
 /*INDEX*/
 .grid-container {
   background-image: url(../img/Body/fondo-index.jpg);
@@ -63,6 +54,8 @@ nav .menu-btn i {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover; }
+  .grid-container .nav-index {
+    margin-top: 3%; }
   .grid-container .grid-main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -81,11 +74,11 @@ nav .menu-btn i {
       margin-top: 0;
       margin-bottom: 5%;
       padding-top: 50px;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
       background-color: #ffffff;
       opacity: 0.8; }
       .grid-container .grid-main .destacado .foto-destacada {
-        padding: 50px 50px 50px 50px;
+        padding: 30px 50px 50px 50px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly; }
@@ -104,7 +97,8 @@ nav .menu-btn i {
           text-align: justify;
           padding-top: 10px;
           margin-left: 30px;
-          color: black; }
+          color: black;
+          font-size: small; }
           .grid-container .grid-main .destacado .texto-destacado p span {
             font-style: italic;
             color: #f76331; }
@@ -119,9 +113,12 @@ nav .menu-btn i {
       display: flex;
       flex-direction: column; }
       .grid-container .grid-main .pinterest .titulo-pint {
-        margin-left: 33%;
-        padding: 10px 10px 10px 55px;
-        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 26%;
+        padding: 10px 10px 10px 25px;
+        width: 45%;
         height: 30%;
         background: #40e0d0;
         /* fallback for old browsers */
@@ -130,6 +127,9 @@ nav .menu-btn i {
         background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         opacity: 0.8; }
+        .grid-container .grid-main .pinterest .titulo-pint h2 {
+          font-family: 'IBM Plex Sans', sans-serif;
+          color: black; }
       .grid-container .grid-main .pinterest .video-index {
         display: flex;
         justify-content: space-around;
@@ -357,7 +357,7 @@ nav .menu-btn i {
           .container-servicios .main-grid-cuatro .servicios .area-servicios2 div p {
             text-align: center; }
     .container-servicios .main-grid-cuatro .video-serv {
-      width: 55%;
+      width: 68%;
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
@@ -405,7 +405,7 @@ nav .menu-btn i {
         grid-template-rows: auto;
         grid-template-areas: "nombre" "telefono" "mail" "noticias" "seleccionar" "mensaje"; }
         .container-contacto .container-main .seccion-info .grid-form .form {
-          width: 120%;
+          width: 110%;
           height: 108%;
           background-color: #c9ece4;
           border-radius: 20px;
@@ -414,9 +414,9 @@ nav .menu-btn i {
             grid-area: nombre;
             display: flex;
             justify-content: left;
-            margin-top: 20px;
+            margin-top: 50px;
             margin-bottom: 20px;
-            margin-left: 40px; }
+            margin-left: 70px; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-nombre input {
               width: 77%; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-nombre label {
@@ -427,7 +427,7 @@ nav .menu-btn i {
             display: flex;
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left: 40px; }
+            margin-left: 70px; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-telefono input {
               width: 77%; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-telefono label {
@@ -438,7 +438,7 @@ nav .menu-btn i {
             display: flex;
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left: 40px; }
+            margin-left: 70px; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-mail input {
               width: 77%; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-mail label {
@@ -449,14 +449,14 @@ nav .menu-btn i {
             display: flex;
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left: 40px; }
+            margin-left: 70px; }
           .container-contacto .container-main .seccion-info .grid-form .form .cto-seleccionar {
             grid-area: seleccionar;
             display: flex;
             align-items: center;
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left: 40px; }
+            margin-left: 70px; }
             .container-contacto .container-main .seccion-info .grid-form .form .cto-seleccionar h4 {
               color: #14ab88;
               margin-right: 10px; }
@@ -490,9 +490,10 @@ nav .menu-btn i {
             /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/ }
     .container-contacto .container-main .portfolio {
       margin-top: 70px;
-      width: 80%;
+      width: 70%;
       display: flex;
-      margin-left: 10%;
+      justify-content: center;
+      margin-left: 16%;
       background: #14ab88;
       /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #14ab88, #efd61a);
@@ -501,7 +502,6 @@ nav .menu-btn i {
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       opacity: 0.9; }
       .container-contacto .container-main .portfolio h3 {
-        padding-left: 25%;
         padding-top: 15px; }
       .container-contacto .container-main .portfolio a {
         padding-left: 5%;
@@ -519,7 +519,8 @@ footer {
   footer div h4 {
     margin-left: 5px;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: large; }
+    font-size: large;
+    font-weight: light; }
   footer .redes {
     display: flex;
     flex-direction: row;
