@@ -2,6 +2,7 @@
 //*Lista
 $Colores:
 #14ab88, /*navbar*/
+#b8145c, /*logo*/
 #efd61a, /*footer*/
 #ffffff, /*opacity*/
 #3d1320, /*título nosotros*/
@@ -13,9 +14,6 @@ $Colores:
 //*Extends (%placeholder)
 
 
-
-
-
 //*Mixin
 @mixin background ($center,$no-repeat,$scroll,$cover){
     background-position: center;
@@ -24,3 +22,8 @@ $Colores:
     background-size: cover;
 }
 
+@mixin h1 ($bold,$large,$center){
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}

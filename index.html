@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Keywords (18 palabras)-->
+    <meta name="kewords" content="diseño, diseño gráfico, fotografía, redes sociales, ilustración, productos personalizados, gráficas, impresiones 3D, logo, marca, comunicación, marketing, community manager, logo, logotipo.">
+    <!-- Description (180 caracteres)-->
+    <meta name="description" content="Somos una consultora de diseño gráfico integral que ofrece servicios de diseño de marca, diseño gráfico publicitario y diseño gráfico editorial. Creamos logos adaptados a las necesidades del cliente. Gestionamos redes sociales, ofrecemos servicios de fotografía, ilustración e impresión 3D.">
+    <!-- Protocolo O G-->
+    <!-- Type (tipo de sitio web que tenemos)-->
+    <meta property="og:type" content="web site">
+    <!--Title -->
+    <meta property="og:type" content="Meraki | Consultora de Diseño Gráfico y Comunicación">
+    <!-- URTL -->
+    <meta property="og:url" content="https://...">
+    <!-- Image -->
+    <meta property="og:image" content="(dirección de imagen de pag subida al servidor)">
+    
+    <meta property="og:description" content="Somos una consultora de diseño gráfico integral que ofrece servicios de diseño de marca, diseño gráfico publicitario y diseño gráfico editorial. Creamos logos adaptados a las necesidades del cliente. Gestionamos redes sociales, ofrecemos servicios de fotografía, ilustración e impresión 3D.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4642766e24.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
-    <title>Meraki</title>
+    <title>Meraki | Consultora de Diseño Gráfico y Comunicación</title>
 </head>
 <body>
-    <div class="grid-container"><!--En algún lado puede ir un aside con lo + visto en ig o similar-->
+    <div class="grid-container">
         <header class="grid-navBar"> 
             <div>
-                <a href=""><img src="./img/Header/logohe.png" alt="imagen logo" class="logoNavbar"></a>
+                <a href="./index.html"><img src="./img/Header/logohe.png" alt="imagen logo" class="logoNavbar"></a>
             </div>
             <div>   
                 <nav>
@@ -22,30 +39,64 @@
                         <li><a href="./pages/Servicios.html">Servicios</a></li>
                         <li><a href="./pages/Contacto.html">Contacto</a></li>
                     </ul>
+                    <input type="checkbox" id="click">
+                    <label for="click" class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </label>
                 </nav>
             </div> 
         </header>
         <main class="grid-main">
             <section class="logo-meraki"> <!--Meraki: nombre + palabras / Debajo van fotos con animaciones-->
-                <img src="./img/Header/Meraki-logo.png" alt="Logo Meraki"> <!--FALTA AGREGAR FOTO-->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/Header/Meraki_Index.png" class="d-block w-100" alt="Meraki">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Body/carrousel2.jpeg" class="d-block w-100" alt="Diseño Gráfico">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/Body/carrousel3.jpeg" class="d-block w-100" alt="Redes Sociales">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </section>
             <section class="destacado"> <!--Destacado de la semana-->
                 <div class="foto-destacada">
                     <img src="./img/Body/destacadosemdos.png" alt="foto destacada de la semana">
+                    <img src="./img/Body/Destacadosemtres.jpg" alt="foto destacada de la semana">
                 </div>
                 <div class="texto-destacado">
-                    <h2>Destacado de la semana</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid facere, dolorum soluta placeat alias omnis? Voluptatem, nesciunt! Dicta quibusdam harum molestiae ab culpa eum aliquid, consequatur cum quam adipisci?
-                    Magni iure vero, excepturi aliquam, repellat mollitia perferendis tempora molestias doloremque itaque facilis.</p>
-                    <h4>...Hugo Bell</h4>
+                    <h1>Destacado de la semana</h1>
+                    <p>Para la foto destacada de la semana seleccionamos los trabajos con más <i class="fa-sharp fa-solid fa-heart"></i>
+                    en Instagram. <br>
+                    Ambas imágenes fueron diseñadas para la cuenta @historiasdesiempre <i class="fa-sharp fa-solid fa-book"></i><br>
+                    Recuerden que las votaciones se realizan los domingos. No dejen de participar!! <br>
+                    Nos despedimos con una frase inolvidable del poeta francés André Breton: <br>
+                    <br>
+                    <span>"No será el miedo a la locura lo que nos obligue a bajar la bandera de la imaginación".</span></p>
+                    <h3>"Manifiesto surrealista" (1924)</h3>
                 </div>
             </section>
-            <div class="video-index">
-                <iframe src="https://assets.pinterest.com/ext/embed.html?id=2181499811841758" height="300" width="345" frameborder="0" scrolling="no"></iframe>
-                <iframe src="https://assets.pinterest.com/ext/embed.html?id=140806231411117" height="300" width="345" frameborder="0" scrolling="no" ></iframe>
-                <iframe src="https://assets.pinterest.com/ext/embed.html?id=484277766193344193" height="300" width="345" frameborder="0" scrolling="no" ></iframe>
-
-            </div>
+            <section class="pinterest">
+                <div class="titulo-pint">
+                    <h2>¡Nuestros tableros en Pinterest!</h2>
+                </div>
+                <div class="video-index">
+                    <iframe src="https://assets.pinterest.com/ext/embed.html?id=2181499811841758" height="300" width="345" frameborder="0" scrolling="no" target="_blank"></iframe>
+                    <iframe src="https://assets.pinterest.com/ext/embed.html?id=140806231411117" height="300" width="345" frameborder="0" scrolling="no" target="_blank"></iframe>
+                    <iframe src="https://assets.pinterest.com/ext/embed.html?id=484277766193344193" height="300" width="345" frameborder="0" scrolling="no" target="_blank"></iframe>
+                </div>
+            </section>
         </main>
         <footer class="grid-footer">
             <div class="contactanos">
@@ -57,6 +108,7 @@
                 <a href="https://outlook.live.com/owa/" target="_blank"><img src="./img/Footer/mail-logo.png" alt="Logo Mail"></a>
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>

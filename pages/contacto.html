@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Keywords (18 palabras)-->
+    <meta name="kewords" content="diseño, diseño gráfico, fotografía, redes sociales, ilustración, productos personalizados, gráficas, impresiones 3D, logo, marca, comunicación, marketing, community manager, logo, logotipo.">
+    <!-- Description (180 caracteres)-->
+    <meta name="description" content="Somos una consultora de diseño gráfico integral que ofrece servicios de diseño de marca, diseño gráfico publicitario y diseño gráfico editorial. Creamos logos adaptados a las necesidades del cliente. Gestionamos redes sociales, ofrecemos servicios de fotografía, ilustración e impresión 3D.">
+    <!-- Protocolo O G-->
+    <!-- Type (tipo de sitio web que tenemos)-->
+    <meta property="og:type" content="web site">
+    <!--Title -->
+    <meta property="og:type" content="Meraki | Consultora de Diseño Gráfico y Comunicación">
+    <!-- URTL -->
+    <meta property="og:url" content="https://...">
+    <!-- Image -->
+    <meta property="og:image" content="(dirección de imagen de pag subida al servidor)">
+    
+    <meta property="og:description" content="Somos una consultora de diseño gráfico integral que ofrece servicios de diseño de marca, diseño gráfico publicitario y diseño gráfico editorial. Creamos logos adaptados a las necesidades del cliente. Gestionamos redes sociales, ofrecemos servicios de fotografía, ilustración e impresión 3D.">
+    <script src="https://kit.fontawesome.com/4642766e24.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
 </head>
@@ -25,25 +41,24 @@
                 </nav>
             </div>  
         </header>
-        <main class="main-grid-cinco">
-            <section> 
-                <h2>Dejanos tu consulta!</h2>
+        <main class="container-main">
+            <section class="main-titulo">
+                <h1>Dejanos tu consulta!</h1>
             </section>
-            <section> 
-                <div class="formulario">
-                    <form action="" method="post" enctype="">
+            <section class="seccion-info">
+                <div class="grid-form">
+                    <form class="form">
                         <div class="cto-nombre">
-                            <label for="nombre">
-                                <input type="text" id="nombre" placeholder="Nombre">
-                            </label>
+                            <label for="floatinput"><i class="fa fa-user mx-3"></i></label>
+                            <input type="text" class="form-control" id="floatinput" placeholder="Nombre"/>
                         </div>
                         <div class="cto-telefono">
-                            <label for="telefono">
-                                <input type="text" id="telefono" placeholder="11 1234-5678">
-                            </label>
-                            <label for="mail">
-                                <input type="text" id="mail" placeholder="aquívatumail@hotmail.com">
-                            </label>
+                            <label for="floatinput"><i class="fa fa-phone mx-3"></i></label>
+                            <input type="telefono" class="form-control" id="floatinput" placeholder="Teléfono"/>
+                        </div>
+                        <div class="cto-mail">
+                            <label for="floatinput"><i class="fa fa-envelope mx-3"></i></label>
+                            <input type="mail" class="form-control" id="floatinput" placeholder="Mail"/>    
                         </div>
                         <div class="cto-noticias">
                             <label for="noticias">
@@ -53,7 +68,7 @@
                         </div>
                         <div class="cto-seleccionar">
                             <h4>Quiero saber sobre...</h4>
-                            <select name="" id="">Servicio
+                            <select class="seleccionar" name="" id="">Servicio
                                 <option value="diseño grafico">Diseño Gráfico</option>
                                 <option value="redes sociales">Redes Sociales</option>
                                 <option value="fotografía">Fotografía</option>
@@ -62,13 +77,16 @@
                             </select>
                         </div>
                         <div class="cto-mensaje">
-                            <textarea placeholder="Dejanos tu mensaje" name="" id="" cols="60" rows="12"></textarea>
+                            <textarea for="cto-mensaje" placeholder="Dejanos tu mensaje" name="" id="" cols="60" rows="12"></textarea>
                         </div>
-                        <div class="cto-reset">
-                            <input type="submit" value="Enviar formulario">
-                            <input type="reset" value="Limpiar Formulario">
-                        </div>    
+                        <button type="submit" class="btn btn-custome">Enviar</button>
                     </form>
+                </div>
+            </section>
+            <section>
+                <div class="portfolio">
+                    <h3>Para saber más de nosotros visitanos en</h3>
+                    <a href="https://www.behance.net/" target="_blank"><img src="../img/Body/behance.png" alt=""></a>
                 </div>
             </section>
         </main>
@@ -82,6 +100,5 @@
                 <a href="https://outlook.live.com/owa/" target="_blank"><img src="../img/Footer/mail-logo.png" alt="Logo Mail"></a>
             </div>
         </footer>
-    </div>
 </body>
 </html>
