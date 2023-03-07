@@ -17,6 +17,7 @@
     <meta property="og:image" content="https://proyecto-meraki.netlify.app/img/Header/logohe.png">
     
     <meta property="og:description" content="Somos una consultora de diseño gráfico integral que ofrece servicios de diseño de marca, diseño gráfico publicitario y diseño gráfico editorial. Creamos logos adaptados a las necesidades del cliente. Gestionamos redes sociales, ofrecemos servicios de fotografía, ilustración e impresión 3D. Ponete en contacto!">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4642766e24.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
@@ -28,7 +29,7 @@
                 <a href="../index.html"><img src="../img/Header/logohe.png" alt="imagen logo"></a>
             </div>    
             <div>  
-                <nav>
+                <nav class="nav-contacto">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./Nosotros.html">Nosotros</a></li>
@@ -46,42 +47,41 @@
             <section class="seccion-info">
                 <div class="grid-form">
                     <form class="form">
-                        <div class="cto-nombre">
-                            <label for="floatinput"><i class="fa fa-user mx-3"></i></label>
-                            <input type="text" class="form-control" id="floatinput" placeholder="Nombre"/>
+                        <div class="col-lg-4 col-md-6">
+                            <label for="formGroupExampleInput" class="form-label"><i class="fa fa-user mx-3"></i>Nombre</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
                         </div>
-                        <div class="cto-telefono">
-                            <label for="floatinput"><i class="fa fa-phone mx-3"></i></label>
-                            <input type="telefono" class="form-control" id="floatinput" placeholder="Teléfono"/>
+                        <div class="col-lg-4 col-md-6">
+                            <label for="formGroupExampleInput2" class="form-label"><i class="fa fa-phone mx-3"></i>Teléfono</label>
+                            <input type="telefono" class="form-control" id="formGroupExampleInput2" placeholder="Teléfono">
                         </div>
-                        <div class="cto-mail">
-                            <label for="floatinput"><i class="fa fa-envelope mx-3"></i></label>
-                            <input type="mail" class="form-control" id="floatinput" placeholder="Mail"/>    
+                        <div class="col-lg-4 col-md-6">
+                            <label for="formGroupExampleInput2" class="form-label"><i class="fa fa-envelope mx-3"></i>Mail</label>
+                            <input type="mail" class="form-control" id="formGroupExampleInput2" placeholder="Mail">
                         </div>
-                        <div class="cto-noticias">
-                            <label for="noticias">
-                                <input type="checkbox" id="noticias">
-                                <span class="suscribite">Suscribite al Newsletter</span>
-                            </label>
+                        <div class="col-lg-4 col-md-6">
+                            <label for="inputState" class="form-label">Quiero saber sobre...</label>
+                            <select id="inputState" class="form-select">    
+                                <option>Diseño gráfico</option>
+                                <option>Redes Sociales</option>
+                                <option>Fotografía</option>
+                                <option>Ilustración</option>
+                                <option>Productos Personalizados</option>
+                                </select>
                         </div>
-                        <div class="cto-seleccionar">
-                            <h4>Quiero saber sobre...</h4>
-                            <select class="seleccionar" name="" id="">Servicio
-                                <option value="diseño grafico">Diseño Gráfico</option>
-                                <option value="redes sociales">Redes Sociales</option>
-                                <option value="fotografía">Fotografía</option>
-                                <option value="ilustracion">Ilustración</option>
-                                <option value="productos personalizados">Productos Personalizados</option>
-                            </select>
-                        </div>
-                        <div class="cto-mensaje">
-                            <textarea for="cto-mensaje" placeholder="Dejanos tu mensaje" name="" id="" cols="60" rows="12"></textarea>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                Suscribite al Newsletter
+                                </label>
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-custome">Enviar</button>
                     </form>
                 </div>
             </section>
-            <section>
+            <section class="cnt-port">
                 <div class="portfolio">
                     <h3>Para saber más de nosotros visitanos en</h3>
                     <a href="https://www.behance.net/" target="_blank"><img src="../img/Body/behance.png" alt=""></a>
@@ -98,5 +98,6 @@
                 <a href="https://outlook.live.com/owa/" target="_blank"><img src="../img/Footer/mail-logo.png" alt="Logo Mail"></a>
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

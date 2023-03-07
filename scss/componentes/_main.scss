@@ -34,37 +34,39 @@
             background-color: #ffffff;
             opacity: 0.8;
             .foto-destacada{
-                padding: 30px 50px 50px 50px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+                padding: 30px 50px 50px 50px;
                 img{
                     padding: 0 20px 0 20px;
                 }
             }
             .texto-destacado{
-                align-items: center;
                 font-family: 'IBM Plex Sans', sans-serif;
                 @include h1 (bold,large,center);
                 padding-top: 10px;
                 color: #14ab88;
                 p{
-                    width: 140%;
-                    text-align: justify;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    text-align: center;
                     padding-top: 10px;
-                    margin-left: 30px;
                     color: black;
                     font-size: small;
                     span{
                         font-style: italic;
                         color: #f76331;
+                        padding-top: 20px;
                     }
                 }
-                h3{
+                h6{
                     text-align: center;
-                    padding-top: 20px;
+                    padding-top: 5px;
                     color: #f76331;
-                    font-size: medium;
+                    font-size: small;
                     font-weight: bold;
                 }
             }
@@ -85,9 +87,10 @@
                 background: -webkit-linear-gradient(to right, #40e0d0, #ff8c00, #ff0080); /* Chrome 10-25, Safari 5.1-6 */
                 background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 opacity: 0.8;
-                h2{
+                h3{
                     font-family: 'IBM Plex Sans', sans-serif;
                     color: black;
+                    font-weight: bold;
                 }
             }
             .video-index{
@@ -295,15 +298,15 @@
 .container-servicios{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: 60px auto auto auto auto 80px;
     grid-template-areas: 
-    "navBar navBar navBar"
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
-    "footer footer footer"
+    "navBar navBar"
+    "main main"
+    "main main"
+    "main main"
+    "main main"
+    "footer footer"
     ;
     background-image: url(../img/Body/banana.jpg);
     background-repeat: no-repeat;
@@ -324,10 +327,12 @@
     }
     .main-grid-cuatro{
         grid-area: main;
+        align-items: center;
         .servicios{
             display: flex;
             flex-direction: column;
             text-align: justify;
+            margin-left: 10px;
             color: #147566;
             width: 58%;
             font-family: 'IBM Plex Sans', sans-serif;
@@ -335,12 +340,11 @@
                 color: #147566;
                 text-align: center;
                 padding-top: 30px;
-                padding-left: 10px;
             }
             .area-servicios1{
                 margin-top: 30px;
                 display: flex;
-                flex-wrap: nowrap;
+                flex-direction: column;
                 width: 110%;
                 div{
                     background: #A1FFCE;
@@ -350,7 +354,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 60%;
+                    margin-top: 20px;
                     margin-left: 15px;
                     padding-left: 30px;
                     padding-right: 30px;
@@ -363,9 +367,8 @@
                 }
             }
             .area-servicios2{
-                margin-top: 30px;
                 display: flex;
-                flex-wrap: nowrap;
+                flex-direction: column;
                 margin-bottom: 10%;
                 width: 110%;
                 div{
@@ -375,8 +378,8 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 50%;
                     margin-left: 15px;
+                    margin-top: 20px;
                     padding-left: 30px;
                     padding-right: 30px;
                     padding-top: 30px;
@@ -404,181 +407,80 @@
 
 /*CONTACTO*/
 .container-contacto{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 60px auto auto 80px;
-    grid-template-areas: 
-    "navBar navBar navBar"
-    "main main main"
-    "main main main"
-    "footer footer footer"
-    ;
     background-image: url(../img/Body/fondo-index.jpg);
     @include background (center,no-repeat,scroll,cover);
-    .navBar-cont{
-        grid-area: navBar;
-        nav{
-            ul{
-                li{
-                    padding: 10px 10px;
-                    a{
-                        font-size: medium;
-                    }
-                }
-            }
-        }
+    font-family: 'IBM Plex Sans', sans-serif;
+    .nav-contacto{
+        padding-top: 3%;
     }
     .container-main{
-        grid-area: main;
-        font-family: 'IBM Plex Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
         .main-titulo{
+            color: #722039;
+            display: flex;
+            margin-top: 20px;
+            margin-left: 50px;
             padding-top: 15px;
             padding-bottom: 15px;
-            margin-left: 20%;
-            color: #722039;
-            width: 50%;
-            display: flex;
-            justify-content: start;
-            margin-top: 20px;
-            margin-left: 20px;
-            font-weight: bold;
         }
         .seccion-info{
-            display: flex;
-            justify-content: center;
-            .grid-form{
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: auto;
-                grid-template-areas: 
-                "nombre"
-                "telefono"
-                "mail"
-                "noticias"
-                "seleccionar"
-                "mensaje"
-                ;
-                .form{
-                    width: 110%;
-                    height: 108%;
-                    background-color: #c9ece4;
-                    border-radius: 20px;
-                    opacity: 0.8;
-                    .cto-nombre{
-                        grid-area: nombre;
-                        display: flex;
-                        justify-content: left;
-                        margin-top: 50px;
-                        margin-bottom: 20px;
-                        margin-left: 70px;
-                        input{
-                            width: 77%;
-                        }
-                        label{
-                            margin-right: 10px;
-                            color: #14ab88;
-                        }
-                    }
-                    .cto-telefono{
-                        grid-area: telefono;
-                        display: flex;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left: 70px;
-                        input{
-                            width: 77%;
-                        }
-                        label{
-                            margin-right: 10px;
-                            color: #14ab88;
-                        }
-                    }
-                    .cto-mail{
-                        grid-area: mail;
-                        display: flex;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left: 70px;
-                        input{
-                            width: 77%;
-                        }
-                        label{
-                            margin-right: 10px;
-                            color: #14ab88;
-                        }
-                    }
-                    .cto-noticias{
-                        grid-area: noticias;
-                        display: flex;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left: 70px;
-                    }
-                    .cto-seleccionar{
-                        grid-area: seleccionar;
-                        display: flex;
-                        align-items: center;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left: 70px;
-                        h4{
-                            color: #14ab88;
-                            margin-right: 10px;
-                        }
-                        .seleccionar{
-                            height: 30px;
-                            color: #074436;
-                            font-weight: bold;
-                            background: #75c4b1;
-                            /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, #75c4b1, #14ab88);
-                            /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, #75c4b1, #14ab88);
-                            /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
-                        }
-                    }
-                    .cto-mensaje{
-                        grid-area: mensaje;
-                        display: flex;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        margin-left: 40px;
-                    }
-                    .btn-custome{
-                        width: 70px;
-                        height: 40px;
-                        margin-left: 40px;
-                        color: #074436;
+            margin: 30px 50px 30px 50px;
+            .form{
+                div{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    label{
+                        color: white;
+                        font-size: 18px;
                         font-weight: bold;
-                        background: #75c4b1;
-                        /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, #75c4b1, #14ab88);
-                        /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, #75c4b1, #14ab88);
-                        /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
+                        i{
+                            color: #efd61a;
+                        }
                     }
+                    input{
+                        color: #074436;
+                        border: solid 2px #074436;
+                    }
+                    select{
+                        border: solid 2px #074436;
+                    }
+                }
+                .btn-custome{
+                    width: 70px;
+                    height: 40px;
+                    color: #074436;
+                    font-weight: bold;
+                    background: #75c4b1;
+                    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, #75c4b1, #14ab88);
+                    /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, #75c4b1, #14ab88);
+                    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
                 }
             }
         }
-        .portfolio{
-            margin-top: 70px;
-            width: 70%;
+        .cnt-port{
             display: flex;
             justify-content: center;
-            margin-left: 16%;
-            background: #14ab88; /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #14ab88, #efd61a); /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #14ab88, #efd61a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            opacity: 0.9;
-            h3{
-                padding-top: 15px;
-            }
-            a{
-                padding-left: 5%;
-                padding-top: 15px;
-                padding-bottom: 10px;
-            }
+            .portfolio{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 70px;
+                margin-bottom: 50px;
+                background: #14ab88; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #14ab88, #efd61a); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #14ab88, #efd61a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                opacity: 0.9;
+                h3{
+                    padding-top: 15px;
+                }
+                a{
+                    padding-left: 5%;
+                    padding-top: 15px;
+                    padding-bottom: 10px;
+                }
         }
+        }
+}
 
-    }
-    .footer-grid-cinco{
-        grid-area: footer;
-    }
 }
